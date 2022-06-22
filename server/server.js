@@ -7,6 +7,10 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '../public'));
+});
+
+app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
